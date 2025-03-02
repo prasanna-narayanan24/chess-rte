@@ -73,8 +73,7 @@ function ShowPositionHistory({ history }: { history: IGameMoveHistory[] }) {
   );
 }
 
-const PlayerVsComputerChessGame = () => {
-  const playerColor = useMemo(() => localStorage.getItem(`@/chess-fe/player-color`) as 'white' | 'black', []);
+const PlayerVsComputerChessGame = ({ playerColor }: { playerColor: 'white' | 'black' }) => {
 
   const game = useMemo(() => new Chess(), []);
 

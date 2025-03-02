@@ -23,7 +23,7 @@ function App() {
         return <ChessGame gameId={gameId} playerName={playerName!} currentPlayerId={currentPlayerId} />;
       }
     } else if (gameMode === 'computer') {
-      return <PlayerVsComputerChessGame />
+      return <PlayerVsComputerChessGame playerColor="white" />
     } else if (gameMode === null)  {
       return <Lobby setGameId={setGameId} setGameMode={setGameMode} setPlayerName={setPlayerName} setCurrentPlayerId={setCurrentPlayerId} />
     }

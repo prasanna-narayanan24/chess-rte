@@ -4,12 +4,11 @@ import { ReactNode } from "react";
 interface GameLayoutProps {
   sidebar: ReactNode;
   board: ReactNode;
-  controls: ReactNode;
   info: ReactNode;
   analysis?: ReactNode;
 }
 
-export function GameLayout({ sidebar, board, controls, info, analysis }: GameLayoutProps) {
+export function GameLayout({ sidebar, board, info, analysis }: GameLayoutProps) {
   const isVertical = useBreakpointValue({ base: true, lg: false });
   console.log('isVertical :>> ', isVertical);
 
